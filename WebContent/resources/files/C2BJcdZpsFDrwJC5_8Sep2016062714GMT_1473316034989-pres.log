@@ -1,0 +1,10 @@
+	at org.jboss.jms.server.bridge.JNDIFactorySupport.createObject(JNDIFactorySupport.java:66)
+	at org.jboss.jms.server.bridge.JNDIDestinationFactory.createDestination(JNDIDestinationFactory.java:45)
+	at org.jboss.jms.server.bridge.Bridge.setupJMSObjects(Bridge.java:956)
+	at org.jboss.jms.server.bridge.Bridge.setupJMSObjectsWithRetry(Bridge.java:1223)
+	at org.jboss.jms.server.bridge.Bridge.access$1600(Bridge.java:68)
+	at org.jboss.jms.server.bridge.Bridge$FailureHandler.run(Bridge.java:1569)
+	at java.lang.Thread.run(Unknown Source)
+2015-05-11 16:03:27,268 WARN  [org.jboss.jms.server.bridge.Bridge] jboss.messaging:name=FaultTopicBridge,service=Bridge Failed to set up connections, will retry after a pause of 5000 ms
+2015-05-11 16:03:33,039 INFO  [org.jboss.jms.server.bridge.Bridge] jboss.messaging:name=PmTopicBridge,service=Bridge Succeeded in connecting to servers
+2015-05-11 16:03:33,039 INFO  [org.jboss.jms.server.bridge.Bridge] jboss.messaging:name=FaultTopicBridge,service=Bridge Succeeded in connecting to servers

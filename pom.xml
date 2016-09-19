@@ -208,6 +208,28 @@
 			<artifactId>commons-io</artifactId>
 			<version>2.0</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.atlassian.jira</groupId>
+			<artifactId>jira-rest-java-client-api</artifactId>
+			<version>2.0.0-m25</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.atlassian.jira</groupId>
+			<artifactId>jira-rest-java-client-core</artifactId>
+			<version>2.0.0-m25</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/net.authorize/anet-java-sdk -->
+		<dependency>
+			<groupId>net.authorize</groupId>
+			<artifactId>anet-java-sdk</artifactId>
+			<version>1.8.0</version>
+		</dependency>
+
+
+
 	</dependencies>
 	<build>
 		<plugins>

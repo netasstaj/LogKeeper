@@ -1,10 +1,14 @@
 package net.logkeeper.spring.model;
+
 // Generated 16.Mar.2016 09:29:26 by Hibernate Tools 3.4.0.CR1
+
+import static javax.persistence.GenerationType.IDENTITY;
+
+import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -13,100 +17,104 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "file", catalog = "fileupload")
-public class LogFile implements java.io.Serializable {
+public class LogFile implements Serializable {
 
-	private Integer id;
-	private String path;
-	private int fileGroupId;
-	private String createDate;
-	private String enabled;
+    @Id
+    @GeneratedValue(strategy = IDENTITY)
+    @Column(name = "id", unique = true, nullable = false)
+    private Integer id;
+
+    @Column(name = "path", length = 500, nullable = false)
+    private String path;
+    private int fileGroupId;
+    private String createDate;
+    private String enabled;
     private String fileTag;
     private String size;
-	public LogFile() {
-	}
 
-	public LogFile(String path, int fileGroupId) {
-		this.path = path;
-		this.fileGroupId = fileGroupId;
-	}
+    public LogFile() {
 
-	public LogFile(String path, int fileGroupId, String createDate, String enabled, String fileTag) {
-		this.path = path;
-		this.fileGroupId = fileGroupId;
-		this.createDate = createDate;
-		this.enabled = enabled;
-		this.fileTag=fileTag;
-	}
+    }
 
-	@Id
-	@GeneratedValue(strategy = IDENTITY)
+    public LogFile(String path, int fileGroupId) {
+	this.path = path;
+	this.fileGroupId = fileGroupId;
+    }
 
-	@Column(name = "id", unique = true, nullable = false)
-	public Integer getId() {
-		return this.id;
-	}
+    public LogFile(String path, int fileGroupId, String createDate,
+	    String enabled, String fileTag) {
+	this.path = path;
+	this.fileGroupId = fileGroupId;
+	this.createDate = createDate;
+	this.enabled = enabled;
+	this.fileTag = fileTag;
+    }
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    @Override
+    public String toString() {
+	return "LogFile [id=" + id + ", path=" + path + ", fileGroupId="
+		+ fileGroupId + ", createDate=" + createDate + ", enabled="
+		+ enabled + ", fileTag=" + fileTag + "]";
+    }
 
-	@Column(name = "path", length=500,nullable = false)
-	public String getPath() {
-		return this.path;
-	}
+    public Integer getId() {
+	return this.id;
+    }
 
-	public void setPath(String path) {
-		this.path = path;
-	}
+    public void setId(Integer id) {
+	this.id = id;
+    }
 
-	@Column(name = "file_group_id", nullable = false)
-	public int getFileGroupId() {
-		return this.fileGroupId;
-	}
+    public String getPath() {
+	return this.path;
+    }
 
-	public void setFileGroupId(int fileGroupId) {
-		this.fileGroupId = fileGroupId;
-	}
+    public void setPath(String path) {
+	this.path = path;
+    }
 
-	@Column(name = "file_tag", length = 130)
-	public String getFileTag() {
-		return this.fileTag;
-	}
+    @Column(name = "file_group_id", nullable = false)
+    public int getFileGroupId() {
+	return this.fileGroupId;
+    }
 
-	public void setFileTag(String fileTag) {
-		this.fileTag = fileTag;
-	}
-	
-	@Column(name = "create_date", length = 45)
-	public String getCreateDate() {
-		return this.createDate;
-	}
+    public void setFileGroupId(int fileGroupId) {
+	this.fileGroupId = fileGroupId;
+    }
 
-	public void setCreateDate(String createDate) {
-		this.createDate = createDate;
-	}
+    @Column(name = "file_tag", length = 130)
+    public String getFileTag() {
+	return this.fileTag;
+    }
 
-	@Column(name = "enabled", length = 45)
-	public String getEnabled() {
-		return this.enabled;
-	}
+    public void setFileTag(String fileTag) {
+	this.fileTag = fileTag;
+    }
 
-	public void setEnabled(String enabled) {
-		this.enabled = enabled;
-	}
-	@Column(name = "size", length = 45)
-	public String getSize() {
-		return this.size;
-	}
+    @Column(name = "create_date", length = 45)
+    public String getCreateDate() {
+	return this.createDate;
+    }
 
-	public void setSize(String size) {
-		this.size = size;
-	}
+    public void setCreateDate(String createDate) {
+	this.createDate = createDate;
+    }
 
-	@Override
-	public String toString() {
-		return "LogFile [id=" + id + ", path=" + path + ", fileGroupId=" + fileGroupId + ", createDate=" + createDate
-				+ ", enabled=" + enabled + ", fileTag=" + fileTag + ", size=" + size + "]";
-	}
+    @Column(name = "enabled", length = 45)
+    public String getEnabled() {
+	return this.enabled;
+    }
 
+    public void setEnabled(String enabled) {
+	this.enabled = enabled;
+    }
+
+    @Column(name = "size", length = 45)
+    public String getSize() {
+	return this.size;
+    }
+
+    public void setSize(String size) {
+	this.size = size;
+    }
 }

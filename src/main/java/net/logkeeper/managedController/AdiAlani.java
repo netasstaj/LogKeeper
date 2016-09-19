@@ -1,203 +1,222 @@
 package net.logkeeper.managedController;
+
 import java.io.Serializable;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import net.logkeeper.spring.model.FileGroup;
 import net.logkeeper.spring.service.FileGroupService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 @ManagedBean(name = "adiAlani")
 @SessionScoped
 @Component
 public class AdiAlani implements Serializable {
-	private String Alani;
-	private String Category;
-	private String KullaniciGirisi;
-	private String PathName;
-	private String Path;
-	private String Extension;
-	private String IdFile;
-	private String DateName;
-	private String User;
-	private String fileGroup;
-	private String Size;
-	private Boolean Jira;
-	private List<String> fileTag;
-	private int id;
-	private AdiAlani selectedFile;
-	
-	public AdiAlani(){
-		
-	}
-    public AdiAlani(int id, String Alani,String User, String DateName){
-		this.id=id;
-		this.Alani=Alani;
-		this.User=User;
-		this.DateName=DateName;
-	}
-	
-	public List<String> getFileTag() {
-		return fileTag;
-	}
+    private String Alani;
+    private String Category;
+    private String KullaniciGirisi;
+    private String PathName;
+    private String Path;
+    private String Extension;
+    private String IdFile;
+    private String DateName;
+    private String User;
+    private String fileGroup;
+    private String Size;
+    private Boolean Jira;
+    private List<String> fileTag;
+    private int id;
+    private AdiAlani selectedFile;
+    private int useful;
+    private int useless;
 
-	public void setFileTag(List<String> fileTag) {
-		this.fileTag = fileTag;
-	}
+    public AdiAlani() {
 
-	public Boolean getJira() {
-		return Jira;
-	}
+    }
 
-	public void setJira(Boolean jira) {
-		Jira = jira;
-	}
+    public AdiAlani(int id, String Alani, String User, String DateName) {
+	this.id = id;
+	this.Alani = Alani;
+	this.User = User;
+	this.DateName = DateName;
+    }
 
-	public String getSize() {
-		return Size;
-	}
+    public List<String> getFileTag() {
+	return fileTag;
+    }
 
-	public void setSize(String size) {
-		Size = size;
-	}
+    public void setFileTag(List<String> fileTag) {
+	this.fileTag = fileTag;
+    }
 
-	boolean editable;
+    public Boolean getJira() {
+	return Jira;
+    }
 
-	public boolean isEditable() {
-		return editable;
-	}
+    public void setJira(Boolean jira) {
+	Jira = jira;
+    }
 
-	public void setEditable(boolean editable) {
-		this.editable = editable;
-	}
+    public String getSize() {
+	return Size;
+    }
 
+    public void setSize(String size) {
+	Size = size;
+    }
 
-	public String getFileGroup() {
-		return fileGroup;
-	}
+    boolean editable;
 
-	public void setFileGroup(String fileGroup) {
-		this.fileGroup = fileGroup;
-	}
+    public boolean isEditable() {
+	return editable;
+    }
 
-	public String getUser() {
-		return User;
-	}
+    public void setEditable(boolean editable) {
+	this.editable = editable;
+    }
 
-	public void setUser(String user) {
-		User = user;
-	}
+    public String getFileGroup() {
+	return fileGroup;
+    }
 
-	public String getDateName() {
-		return DateName;
-	}
+    public void setFileGroup(String fileGroup) {
+	this.fileGroup = fileGroup;
+    }
 
-	public void setDateName(String dateName) {
-		DateName = dateName;
-	}
+    public String getUser() {
+	return User;
+    }
 
-	public String getIdFile() {
-		return IdFile;
-	}
+    public void setUser(String user) {
+	User = user;
+    }
 
-	public void setIdFile(String idFile) {
-		IdFile = idFile;
-	}
+    public String getDateName() {
+	return DateName;
+    }
 
-	public String getExtension() {
-		return Extension;
-	}
+    public void setDateName(String dateName) {
+	DateName = dateName;
+    }
 
-	public void setExtension(String extension) {
-		Extension = extension;
-	}
+    public String getIdFile() {
+	return IdFile;
+    }
 
-	public String getPath() {
-		return Path;
-	}
+    public void setIdFile(String idFile) {
+	IdFile = idFile;
+    }
 
-	public void setPath(String path) {
-		Path = path;
-	}
+    public String getExtension() {
+	return Extension;
+    }
 
-	
+    public void setExtension(String extension) {
+	Extension = extension;
+    }
 
-	public AdiAlani getSelectedFile() {
-		return selectedFile;
-	}
-    
-	
-	public void setSelectedFile(AdiAlani selectedFile) {
-		this.selectedFile = selectedFile;
-	}
+    public String getPath() {
+	return Path;
+    }
 
-	public int getId() {
-		return id;
-	}
+    public void setPath(String path) {
+	Path = path;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public AdiAlani getSelectedFile() {
+	return selectedFile;
+    }
 
-	public String getPathName() {
-		return PathName;
-	}
+    public void setSelectedFile(AdiAlani selectedFile) {
+	this.selectedFile = selectedFile;
+    }
 
-	public void setPathName(String pathName) {
-		PathName = pathName;
-	}
+    public int getId() {
+	return id;
+    }
 
-	public String getKullaniciGirisi() {
-		return KullaniciGirisi;
-	}
+    public void setId(int id) {
+	this.id = id;
+    }
 
-	public void setKullaniciGirisi(String kullaniciGirisi) {
-		KullaniciGirisi = kullaniciGirisi;
-	}
+    public String getPathName() {
+	return PathName;
+    }
 
-	public String getCategory() {
-		return Category;
-	}
+    public void setPathName(String pathName) {
+	PathName = pathName;
+    }
 
-	public void setCategory(String category) {
-		Category = category;
-	}
+    public String getKullaniciGirisi() {
+	return KullaniciGirisi;
+    }
 
-	public String getAlani() {
-		return Alani;
-	}
+    public void setKullaniciGirisi(String kullaniciGirisi) {
+	KullaniciGirisi = kullaniciGirisi;
+    }
 
-	public void setAlani(String Alani) {
-		this.Alani = Alani;
-	}
-	@Autowired
-	public FileGroupService fileGroupService;
-	
-	public FileGroupService getFileGroupService() {
-		return fileGroupService;
-	}
-	public void setFileGroupService(FileGroupService fileGroupService) {
-		this.fileGroupService = fileGroupService;
-	}
-	public void saveAction(AdiAlani aa) {
-		// get all existing value but set "editable" to false
-		aa.setEditable(false);
-		 FileGroup fileGroups=getFileGroupService().findByFileGroup(aa.getId());
-		 fileGroups.setName(aa.getAlani());
-		 getFileGroupService().update(fileGroups);
-		System.out.println("File Group Name: "+aa.getAlani());
-		// return to current page
-	}
-	public void editAction(AdiAlani aa) {
-		aa.setEditable(true);
-	}
-	public void closeAction(AdiAlani aa)
-	{
-		aa.setEditable(false);
-	}
+    public String getCategory() {
+	return Category;
+    }
+
+    public void setCategory(String category) {
+	Category = category;
+    }
+
+    public String getAlani() {
+	return Alani;
+    }
+
+    public void setAlani(String Alani) {
+	this.Alani = Alani;
+    }
+
+    @Autowired
+    public FileGroupService fileGroupService;
+
+    public FileGroupService getFileGroupService() {
+	return fileGroupService;
+    }
+
+    public void setFileGroupService(FileGroupService fileGroupService) {
+	this.fileGroupService = fileGroupService;
+    }
+
+    public int getUseful() {
+	return useful;
+    }
+
+    public void setUseful(int useful) {
+	this.useful = useful;
+    }
+
+    public int getUseless() {
+	return useless;
+    }
+
+    public void setUseless(int useless) {
+	this.useless = useless;
+    }
+
+    public void saveAction(AdiAlani aa) {
+	// get all existing value but set "editable" to false
+	aa.setEditable(false);
+	FileGroup fileGroups = getFileGroupService()
+		.findByFileGroup(aa.getId());
+	fileGroups.setName(aa.getAlani());
+	getFileGroupService().update(fileGroups);
+	// return to current page
+    }
+
+    public void editAction(AdiAlani aa) {
+	aa.setEditable(true);
+    }
+
+    public void closeAction(AdiAlani aa) {
+	aa.setEditable(false);
+    }
 }

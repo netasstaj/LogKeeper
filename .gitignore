@@ -1,2 +1,10 @@
-/build/
-/target/
+build
+target
+/.settings
+
+/.classpath
+
+/.project
+/*.log
+/*.zip
+/*.txt

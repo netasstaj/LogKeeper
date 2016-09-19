@@ -1,7 +1,10 @@
 package net.logkeeper.spring.model;
+
 // Generated 16.Mar.2016 09:29:26 by Hibernate Tools 3.4.0.CR1
 
 import static javax.persistence.GenerationType.IDENTITY;
+
+import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,103 +17,105 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "user", catalog = "fileupload")
-public class User implements java.io.Serializable {
+public class User implements Serializable {
 
-	private Integer id;
-	private String name;
-	private String surname;
-	private String email;
-	private String password;
-	private String createDate;
-	private Boolean enabled;
+    private Integer id;
+    private String name;
+    private String surname;
+    private String email;
+    private String password;
+    private String createDate;
+    private Boolean enabled;
 
-	public User() {
-	}
+    public User() {
 
-	public User(String name, String surname) {
-		this.name = name;
-		this.surname = surname;
-	}
+    }
 
-	public User(String name, String surname, String email, String password, String createDate, Boolean enabled) {
-		this.name = name;
-		this.surname = surname;
-		this.email = email;
-		this.password = password;
-		this.createDate = createDate;
-		this.enabled = enabled;
-	}
+    public User(String name, String surname) {
+	this.name = name;
+	this.surname = surname;
+    }
 
-	@Id
-	@GeneratedValue(strategy = IDENTITY)
+    public User(String name, String surname, String email, String password,
+	    String createDate, Boolean enabled) {
+	this.name = name;
+	this.surname = surname;
+	this.email = email;
+	this.password = password;
+	this.createDate = createDate;
+	this.enabled = enabled;
+    }
 
-	@Column(name = "id", unique = true, nullable = false)
-	public Integer getId() {
-		return this.id;
-	}
+    @Id
+    @GeneratedValue(strategy = IDENTITY)
+    @Column(name = "id", unique = true, nullable = false)
+    public Integer getId() {
+	return this.id;
+    }
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    public void setId(Integer id) {
+	this.id = id;
+    }
 
-	@Column(name = "name", nullable = false, length = 100)
-	public String getName() {
-		return this.name;
-	}
+    @Column(name = "name", nullable = false, length = 100)
+    public String getName() {
+	return this.name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) {
+	this.name = name;
+    }
 
-	@Column(name = "surname", nullable = false, length = 100)
-	public String getSurname() {
-		return this.surname;
-	}
+    @Column(name = "surname", nullable = false, length = 100)
+    public String getSurname() {
+	return this.surname;
+    }
 
-	public void setSurname(String surname) {
-		this.surname = surname;
-	}
+    public void setSurname(String surname) {
+	this.surname = surname;
+    }
 
-	@Column(name = "email", length = 45)
-	public String getEmail() {
-		return this.email;
-	}
+    @Column(name = "email", length = 45)
+    public String getEmail() {
+	return this.email;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public void setEmail(String email) {
+	this.email = email;
+    }
 
-	@Column(name = "password", length = 45)
-	public String getPassword() {
-		return this.password;
-	}
+    @Column(name = "password", length = 45)
+    public String getPassword() {
+	return this.password;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public void setPassword(String password) {
+	this.password = password;
+    }
 
-	@Column(name = "create_date", length = 45)
-	public String getCreateDate() {
-		return this.createDate;
-	}
+    @Column(name = "create_date", length = 45)
+    public String getCreateDate() {
+	return this.createDate;
+    }
 
-	public void setCreateDate(String createDate) {
-		this.createDate = createDate;
-	}
+    public void setCreateDate(String createDate) {
+	this.createDate = createDate;
+    }
 
-	@Column(name = "enabled")
-	public Boolean getEnabled() {
-		return this.enabled;
-	}
+    @Column(name = "enabled")
+    public Boolean getEnabled() {
+	return this.enabled;
+    }
 
-	public void setEnabled(Boolean enabled) {
-		this.enabled = enabled;
-	}
+    public void setEnabled(Boolean enabled) {
+	this.enabled = enabled;
+    }
 
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", surname=" + surname + ", email=" + email + ", password="
-				+ password + ", createDate=" + createDate + ", enabled=" + enabled + "]";
-	}
+    @Override
+    public String toString() {
+	return "User [id=" + id + ", name=" + name + ", surname=" + surname
+		+ ", email=" + email + ", password=" + password
+		+ ", createDate=" + createDate + ", enabled=" + enabled + "]";
+    }
 
 }

@@ -1,0 +1,10 @@
+2015-05-11 16:04:22,118 WARN  [org.jboss.ejb3.interceptor.InterceptorInfoRepository] EJBTHREE-1852: InterceptorInfoRepository is deprecated
+2015-05-11 16:04:22,135 WARN  [org.jboss.ejb3.interceptor.InterceptorInfoRepository] EJBTHREE-1852: InterceptorInfoRepository is deprecated
+2015-05-11 16:04:22,139 WARN  [org.jboss.ejb3.interceptor.InterceptorInfoRepository] EJBTHREE-1852: InterceptorInfoRepository is deprecated
+2015-05-11 16:04:22,142 WARN  [org.jboss.ejb3.interceptor.InterceptorInfoRepository] EJBTHREE-1852: InterceptorInfoRepository is deprecated
+2015-05-11 16:04:22,155 WARN  [org.jboss.ejb3.interceptor.InterceptorInfoRepository] EJBTHREE-1852: InterceptorInfoRepository is deprecated
+2015-05-11 16:04:22,321 INFO  [org.jboss.system.server.profileservice.ProfileServiceBootstrap] Loading profile: ProfileKey@37525aeb[domain=default, server=default, name=adm]
+2015-05-11 16:04:22,339 INFO  [org.apache.coyote.http11.Http11Protocol] Starting Coyote HTTP/1.1 on http-47.168.150.224-8080
+2015-05-11 16:04:22,381 INFO  [org.apache.coyote.ajp.AjpProtocol] Starting Coyote AJP/1.3 on ajp-wvm224-asipc-1%2F10.224.3.11-8009
+2015-05-11 16:04:22,412 INFO  [org.apache.coyote.http11.Http11Protocol] Starting Coyote HTTP/1.1 on http-47.168.150.224-10077
+2015-05-11 16:04:22,446 INFO  [org.jboss.bootstrap.microcontainer.ServerImpl] JBoss (Microcontainer) [5.1.0.GA (build: SVNTag=JBoss_5_1_0_GA date=200905221634)] Started in 4m:12s:911ms

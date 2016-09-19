@@ -40,7 +40,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (16,'sersel','serhat','sersel@NETAS.com.tr','sersel','06.05.2016','');
+INSERT INTO `user` VALUES (16,'turan','onur','onur-turan@outlook.com','turan','06.05.2016','');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

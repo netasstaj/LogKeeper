@@ -2,6 +2,8 @@ package net.logkeeper.spring.model;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,52 +12,54 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "parameter", catalog = "fileupload")
-public class Parameter implements java.io.Serializable {
+public class Parameter implements Serializable {
 
-	@Id
-	@GeneratedValue(strategy = IDENTITY)
-	@Column(name = "id", unique = true, nullable = false)
-	private Integer id;
-	@Column(name = "key_n", unique = true, length = 255)
-	private String key;
-	@Column(name = "value_n", length = 255)
-	private String value;
+    @Id
+    @GeneratedValue(strategy = IDENTITY)
+    @Column(name = "id", unique = true, nullable = false)
+    private Integer id;
+    @Column(name = "key_n", unique = true, length = 255)
+    private String key;
+    @Column(name = "value_n", length = 255)
+    private String value;
 
-	public Parameter() {
-	}
+    public Parameter() {
+    }
 
-	public Parameter(String key, String value) {
-		this.key = key;
-		this.value = value;
-	}
+    public Parameter(String key, String value) {
 
-	public Integer getId() {
-		return this.id;
-	}
+	this.key = key;
+	this.value = value;
+    }
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    public Integer getId() {
+	return this.id;
+    }
 
-	public String getKey() {
-		return this.key;
-	}
+    public void setId(Integer id) {
+	this.id = id;
+    }
 
-	public void setKey(String key) {
-		this.key = key;
-	}
+    public String getKey() {
+	return this.key;
+    }
 
-	public String getValue() {
-		return this.value;
-	}
+    public void setKey(String key) {
+	this.key = key;
+    }
 
-	public void setValue(String value) {
-		this.value = value;
-	}
+    public String getValue() {
+	return this.value;
+    }
 
-	@Override
-	public String toString() {
-		return "Parameter [id=" + id + ", key=" + key + ", value=" + value + "]";
-	}
+    public void setValue(String value) {
+	this.value = value;
+    }
+
+    @Override
+    public String toString() {
+	return "Parameter [id=" + id + ", key=" + key + ", value=" + value
+		+ "]";
+    }
 
 }
